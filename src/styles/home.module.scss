@@ -1,0 +1,22 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    justify-content: space-between;
+}
+
+.container .header .nav {
+    a {
+        font-size: 1.5rem;
+        margin: 1.2rem;
+        font-weight: bold;
+    }
+}
