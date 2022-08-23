@@ -1,13 +1,13 @@
 import React, { useState, useContext, FormEvent } from 'react';
 import Image from 'next/image'
-import LogoImg from '../../public/logo.jpeg'
-import styles from '../styles/home.module.scss'
+import LogoImg from '../../../public/logo.jpeg'
+import styles from './styles.module.scss';
 import { FiLock } from 'react-icons/fi'
 import { FiMail } from 'react-icons/fi'
 import { AuthContext } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
 
-export default function Home() {
+export default function Admin() {
     const { signIn } = useContext(AuthContext)
 
     const [email, setEmail] = useState('');
@@ -59,9 +59,6 @@ export default function Home() {
 
                     <button className={styles.loginButton} type="submit" >Acessar</button>
                 </div>
-                {/* <div className={styles.registry}>
-                    <span className={styles.registryText}>Não tem um conta? <a className='RegistryButton' >Registre-se</a></span>
-                </div> */}
             </form>
         </div>
     </div>

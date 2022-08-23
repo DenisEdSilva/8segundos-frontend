@@ -40,8 +40,8 @@ export const AuthContext = createContext({} as AuthContextProps);
 
 export function signOut() {
 	try {
-		destroyCookie(undefined, '@techlib.token')
-		Router.push('/')
+		destroyCookie(undefined, '@8segundos.token')
+		Router.push('/admin')
 
 	} catch (error) {
 		toast.error("Falha ao deslogar")
@@ -61,7 +61,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 	
 			const { id, name, token } = response.data;
 	
-			setCookie(undefined, '@techlib.token', token, {
+			setCookie(undefined, '@8segundos.token', token, {
 				maxAge: 60 * 60 * 24 * 30,
 				Path: '/',
 			})
@@ -70,7 +70,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 	
 			toast.success('Login realizado com sucesso')
 	
-			// Router.push('/home')
+			Router.push('/admin/dashboard')
 
 		} catch (error) {
 			toast.error('Erro ao acessar')
